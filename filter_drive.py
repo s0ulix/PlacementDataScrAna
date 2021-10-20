@@ -8,7 +8,8 @@ stp=[]
 ctcmin=[]
 ctcmax=[]
 loc=[]
-minctc=int(input("Enter min ctc req: "))
+#minctc=int(input("Enter min ctc req: "))
+minctc=int(input("Enter min stipend req: "))
 for ind,r in df.iterrows():
     if(type(r['CTC'])!=float):
         maxt=0
@@ -58,7 +59,7 @@ for ind,r in df.iterrows():
                         #print(temp)
                         pass
         #print(maxt)
-        if(maxt>=minctc):
+        if(st>=minctc):
             ctcmin.append(mint)
             ctcmax.append(maxt)
             stp.append(st)
